@@ -1,0 +1,21 @@
+LightGBM CPU Bayesian Hyperparameter Search
+==================================================
+
+Train: 7774 (3862 pos / 3912 neg)
+Test: 864 (457 pos / 407 neg)
+Features: ESM-2 150M 640-dim + shallow 426-dim = 1066-dim
+
+[Search Config]
+Trials: 300 x 5-fold CV = 1500 training runs
+Parameters: 16
+Time: ~280 min
+
+[Search Results]
+Best 5-fold CV AUC: 0.9304
+10-fold CV AUC: 0.9292
+Test AUC: 0.9405
+
+[Usage]
+1. Load model: pickle.load(open("LightGBM_Optuna_best.pkl","rb"))
+2. Predict: model.predict_proba(X)[:,1]
+3. Features must be 1066-dim

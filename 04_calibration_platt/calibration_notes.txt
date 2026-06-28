@@ -1,0 +1,23 @@
+Calibration: Platt Scaling (Sigmoid)
+==================================================
+
+[Method]
+Platt Scaling (Sigmoid)
+P_cal = 1 / (1 + exp(a * raw_logit + b))
+1 LightGBM + 1 sigmoid calibrator = 1 file
+
+[Data Split]
+Total: 7,774 (train + val combined)
+  Training (80%): 6,219 -> retrain LightGBM (Optuna optimal params)
+  Calibration (20%): 1,555 -> fit sigmoid
+  Test set (864): untouched
+
+[Calibration Effect (Test Set)]
+Before: min=0.0000  max=1.0000  mean=0.5539
+After:  min=0.0771  max=0.9078  mean=0.5271
+
+[Usage]
+import pickle
+calibrated = pickle.load(open("model/LightGBM_Platt_calibrated.pkl", "rb"))
+calibrated.predict_proba(X)[:, 1]
+Features must be 1066-dim (shallow 426 + ESM-2 150M 640)

@@ -1,0 +1,38 @@
+data_config,
+train_samples,7774
+test_samples,864
+pos_samples,3862
+neg_samples,3912
+feature_dim,1066
+feature_source,ESM-2 150M(640) + shallow(426)
+search_config,
+model,LightGBM CPU
+n_trials,300
+cv_strategy,5-fold search + 10-fold validation
+search_time_min,280.9
+best_5fold_CV_AUC,0.9304
+10fold_CV_AUC_mean,0.9292
+10fold_CV_ACC_mean,0.845
+10fold_CV_F1_mean,0.8455
+10fold_CV_MCC_mean,0.6903
+best_params,
+max_depth,8
+num_leaves,62
+lr,0.06352293073833006
+subsample,0.8528935222822775
+colsample,0.6745860763709346
+bagging_freq,10
+L2,0.8928174498614541
+L1,0.0009832162474431843
+min_child,16
+min_gain,0.035505368462810064
+max_bin,110
+max_delta,3.7896450795931953
+min_hessian,0.11927433420983669
+boost_avg,True
+extra_trees,False
+test_results,
+Test_AUC,0.9405
+Test_ACC,0.8588
+Test_F1,0.8697
+Test_MCC,0.7167

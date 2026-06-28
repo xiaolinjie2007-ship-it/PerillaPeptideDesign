@@ -1,0 +1,16 @@
+param,importance
+max_delta,0.5054
+min_gain,0.1769
+L1,0.1364
+extra_trees,0.0562
+min_child,0.0242
+L2,0.0236
+subsample,0.0218
+min_hessian,0.0187
+num_leaves,0.0133
+max_bin,0.0072
+bagging_freq,0.0059
+colsample,0.0053
+max_depth,0.0031
+lr,0.0014
+boost_avg,0.0006
