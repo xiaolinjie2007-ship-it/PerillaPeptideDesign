@@ -1,4 +1,4 @@
-<img width="1536" height="1024" alt="技术全景" src="https://github.com/user-attachments/assets/8ff6ddf3-721b-4159-b919-1e8a44291ceb" />
+
 <img width="1536" height="1024" alt="技术全景" src="https://github.com/user-attachments/assets/d6e2f820-3f52-4b3d-b46c-49a943614e59" />
 # CogPepML - Cognitive Peptide Machine Learning
 
